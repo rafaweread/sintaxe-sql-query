@@ -1,0 +1,205 @@
+[0m23:42:41.028826 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028A6D2367B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028A6F653ED0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028A6F653B10>]}
+
+
+============================== 23:42:41.062843 | 996ee6fe-a7ba-4406-acc6-1976b46a2289 ==============================
+[0m23:42:41.062843 [info ] [MainThread]: Running with dbt=1.12.5
+[0m23:42:41.064423 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'maximum_seed_size_mib': '1', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\rafae\\.dbt', 'use_colors': 'True', 'hints_enabled': 'True', 'invocation_command': 'dbt init project_lab_dbt', 'use_experimental_parser': 'False', 'indirect_selection': 'eager', 'log_path': 'logs'}
+[0m23:42:41.561125 [debug] [MainThread]: Starter project path: G:\Meu Drive\Information technology - IT\Linguagem de Programação\SQL\Project_DBT\venv-dbt\Lib\site-packages\dbt\include\starter_project
+[0m23:42:41.921591 [info ] [MainThread]: Setting up your profile.
+[0m23:43:24.521583 [info ] [MainThread]: Profile project_lab_dbt written to C:\Users\rafae\.dbt\profiles.yml using target's profile_template.yml and your supplied values.
+[0m23:43:24.559805 [info ] [MainThread]: Running dbt debug to validate the project...
+[0m23:43:24.561896 [info ] [MainThread]: dbt version: 1.12.5
+[0m23:43:24.562745 [info ] [MainThread]: python version: 3.13.14
+[0m23:43:24.563562 [info ] [MainThread]: python path: G:\Meu Drive\Information technology - IT\Linguagem de Programação\SQL\Project_DBT\venv-dbt\Scripts\python.exe
+[0m23:43:24.564433 [info ] [MainThread]: os info: Windows-11-10.0.26200-SP0
+[0m23:43:24.614027 [info ] [MainThread]: Using profiles dir at C:\Users\rafae\.dbt
+[0m23:43:24.615203 [info ] [MainThread]: Using profiles.yml file at C:\Users\rafae\.dbt\profiles.yml
+[0m23:43:24.616388 [info ] [MainThread]: Using dbt_project.yml file at G:\Meu Drive\Information technology - IT\Linguagem de Programação\SQL\Project_DBT\project_lab_dbt\dbt_project.yml
+[0m23:43:24.630504 [info ] [MainThread]: adapter type: postgres
+[0m23:43:24.633558 [info ] [MainThread]: adapter version: 1.11.0
+[0m23:43:24.802993 [info ] [MainThread]: Configuration:
+[0m23:43:24.804235 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m23:43:24.805196 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m23:43:24.806120 [info ] [MainThread]: Required dependencies:
+[0m23:43:24.807003 [debug] [MainThread]: Executing "git --help"
+[0m23:43:24.882737 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   history    EXPERIMENTAL: Rewrite history\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Set `HEAD` or the index to a known state\n   switch     Switch branches\n   tag        Create, list, delete or verify tags\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m23:43:24.883667 [debug] [MainThread]: STDERR: "b''"
+[0m23:43:24.884307 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m23:43:24.885215 [info ] [MainThread]: Connection:
+[0m23:43:24.886019 [info ] [MainThread]:   host: localhost
+[0m23:43:24.886762 [info ] [MainThread]:   port: 5432
+[0m23:43:24.887557 [info ] [MainThread]:   user: postgres
+[0m23:43:24.888203 [info ] [MainThread]:   database: stage
+[0m23:43:24.888849 [info ] [MainThread]:   schema: public
+[0m23:43:24.889524 [info ] [MainThread]:   connect_timeout: 10
+[0m23:43:24.890473 [info ] [MainThread]:   role: None
+[0m23:43:24.891128 [info ] [MainThread]:   search_path: None
+[0m23:43:24.891766 [info ] [MainThread]:   keepalives_idle: 0
+[0m23:43:24.892434 [info ] [MainThread]:   sslmode: None
+[0m23:43:24.893221 [info ] [MainThread]:   sslcert: None
+[0m23:43:24.893903 [info ] [MainThread]:   sslkey: None
+[0m23:43:24.894598 [info ] [MainThread]:   sslrootcert: None
+[0m23:43:24.895609 [info ] [MainThread]:   application_name: dbt
+[0m23:43:24.896703 [info ] [MainThread]:   autocommit: False
+[0m23:43:24.897432 [info ] [MainThread]:   retries: 1
+[0m23:43:24.900019 [info ] [MainThread]: Registered adapter: postgres=1.11.0
+[0m23:43:28.294325 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m23:43:36.866460 [debug] [MainThread]: Using postgres connection "debug"
+[0m23:43:36.867183 [debug] [MainThread]: On debug: select 1 as id
+[0m23:43:36.867948 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m23:43:36.933722 [debug] [MainThread]: Postgres adapter: Got a retryable error when attempting to open a postgres connection.
+1 attempts remaining. Retrying in 0 seconds.
+Error:
+connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+[0m23:43:36.948326 [debug] [MainThread]: Postgres adapter: Error running SQL: select 1 as id
+[0m23:43:36.949364 [debug] [MainThread]: Postgres adapter: Rolling back transaction.
+[0m23:43:36.950020 [debug] [MainThread]: On debug: No close available on handle
+[0m23:43:36.950754 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m23:43:36.951605 [info ] [MainThread]: [31m1 check failed:[0m
+[0m23:43:36.952265 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+  
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m23:43:36.953080 [info ] [MainThread]: Your new dbt project "project_lab_dbt" was created!
+Initialized new project in G:\Meu Drive\Information technology - IT\Linguagem de Programação\SQL\Project_DBT\project_lab_dbt\project_lab_dbt
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m23:43:36.953765 [info ] [MainThread]: [31mYour profile may need adjustments. You can find the logs of `dbt debug` above[0m
+[0m23:43:36.958786 [debug] [MainThread]: Command `dbt init` succeeded at 23:43:36.958614 after 56.16 seconds
+[0m23:43:36.959534 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m23:43:36.960260 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028A6F84E190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028A6F6EC5F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028A6F9387C0>]}
+[0m23:43:36.960890 [debug] [MainThread]: Flushing usage events
+[0m23:44:16.654683 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:44:36.740810 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000230576327B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023059A57ED0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023059A57B10>]}
+
+
+============================== 23:44:36.758432 | 9afeddf2-d33a-4e77-b817-59fd4a624e4d ==============================
+[0m23:44:36.758432 [info ] [MainThread]: Running with dbt=1.12.5
+[0m23:44:36.759500 [debug] [MainThread]: running dbt with arguments {'maximum_seed_size_mib': '1', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'version_check': 'True', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'C:\\Users\\rafae\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'invocation_command': 'dbt init project_lab_dbt', 'hints_enabled': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'use_colors': 'True', 'log_path': 'logs'}
+[0m23:44:37.056022 [info ] [MainThread]: A project called project_lab_dbt already exists here.
+[0m23:44:37.059415 [debug] [MainThread]: Command `dbt init` succeeded at 23:44:37.059293 after 0.45 seconds
+[0m23:44:37.060072 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023059AB1F30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023059AEC5F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023059A839B0>]}
+[0m23:44:37.060698 [debug] [MainThread]: Flushing usage events
+[0m23:45:17.874162 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:48:40.395627 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002505FFA27B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002506244FED0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002506244FB10>]}
+
+
+============================== 23:48:40.416825 | c6b039f0-cbee-4357-83e9-4078c64466b8 ==============================
+[0m23:48:40.416825 [info ] [MainThread]: Running with dbt=1.12.5
+[0m23:48:40.418017 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'maximum_seed_size_mib': '1', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'version_check': 'True', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\rafae\\.dbt', 'use_colors': 'True', 'hints_enabled': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'invocation_command': 'dbt init', 'log_path': 'logs'}
+[0m00:09:04.510457 [info ] [MainThread]: A project called project_lab_dbt already exists here.
+[0m00:09:04.515336 [debug] [MainThread]: Command `dbt init` succeeded at 00:09:04.515079 after 1224.27 seconds
+[0m00:09:04.516312 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000250624B1F30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000250624EC5F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002506247B9B0>]}
+[0m00:09:04.517508 [debug] [MainThread]: Flushing usage events
+[0m00:09:47.087029 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m00:13:21.303677 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017F910367B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017F934CBED0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017F934CBB10>]}
+
+
+============================== 00:13:21.327291 | 9865ad5f-ed41-4c4a-860f-318100e0abaa ==============================
+[0m00:13:21.327291 [info ] [MainThread]: Running with dbt=1.12.5
+[0m00:13:21.328631 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'maximum_seed_size_mib': '1', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'False', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\rafae\\.dbt', 'invocation_command': 'dbt run', 'hints_enabled': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'use_colors': 'True', 'log_path': 'logs'}
+[0m00:13:21.331488 [error] [MainThread]: [[31mERROR[0m]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path G:\Meu Drive\Information technology - IT\Linguagem de Programação\SQL\Project_DBT\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m00:13:21.335571 [debug] [MainThread]: Command `dbt run` failed at 00:13:21.335387 after 0.25 seconds
+[0m00:13:21.336265 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017F934ED810>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017F93534710>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017F934F9590>]}
+[0m00:13:21.337045 [debug] [MainThread]: Flushing usage events
+[0m00:14:02.072070 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m00:14:37.850481 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DAA53327B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DAA77CBED0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DAA77CBB10>]}
+
+
+============================== 00:14:37.871800 | 5be11288-4f61-431f-bee4-81f28fe37459 ==============================
+[0m00:14:37.871800 [info ] [MainThread]: Running with dbt=1.12.5
+[0m00:14:37.873235 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'maximum_seed_size_mib': '1', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'C:\\Users\\rafae\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'indirect_selection': 'eager', 'hints_enabled': 'True', 'invocation_command': 'dbt test', 'use_experimental_parser': 'False', 'use_colors': 'True', 'log_path': 'logs'}
+[0m00:14:37.874543 [error] [MainThread]: [[31mERROR[0m]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path G:\Meu Drive\Information technology - IT\Linguagem de Programação\SQL\Project_DBT\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m00:14:37.877532 [debug] [MainThread]: Command `dbt test` failed at 00:14:37.877420 after 0.17 seconds
+[0m00:14:37.878062 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DAA77ED810>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DAA7838710>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DAA77F9590>]}
+[0m00:14:37.878952 [debug] [MainThread]: Flushing usage events
+[0m00:15:18.977269 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m00:16:02.820117 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CD81B567B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CD84057ED0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CD84057B10>]}
+
+
+============================== 00:16:02.843014 | 7019e57e-35e4-4037-ac08-52c6cb27c3b8 ==============================
+[0m00:16:02.843014 [info ] [MainThread]: Running with dbt=1.12.5
+[0m00:16:02.844489 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'maximum_seed_size_mib': '1', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'C:\\Users\\rafae\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'use_colors': 'True', 'hints_enabled': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'invocation_command': 'dbt init', 'log_path': 'logs'}
+[0m00:17:26.934159 [error] [MainThread]: [[31mERROR[0m]: Encountered an error:
+
+[0m00:17:27.019379 [error] [MainThread]: Traceback (most recent call last):
+  File "G:\Meu Drive\Information technology - IT\Linguagem de Programação\SQL\Project_DBT\venv-dbt\Lib\site-packages\dbt\cli\requires.py", line 198, in wrapper
+    result, success = func(*args, **kwargs)
+                      ~~~~^^^^^^^^^^^^^^^^^
+  File "G:\Meu Drive\Information technology - IT\Linguagem de Programação\SQL\Project_DBT\venv-dbt\Lib\site-packages\dbt\cli\requires.py", line 144, in wrapper
+    return func(*args, **kwargs)
+  File "G:\Meu Drive\Information technology - IT\Linguagem de Programação\SQL\Project_DBT\venv-dbt\Lib\site-packages\dbt\cli\main.py", line 504, in init
+    results = task.run()
+  File "G:\Meu Drive\Information technology - IT\Linguagem de Programação\SQL\Project_DBT\venv-dbt\Lib\site-packages\dbt\task\init.py", line 340, in run
+    project_name = self.get_valid_project_name()
+  File "G:\Meu Drive\Information technology - IT\Linguagem de Programação\SQL\Project_DBT\venv-dbt\Lib\site-packages\dbt\task\init.py", line 281, in get_valid_project_name
+    name = click.prompt("Enter a name for your project (letters, digits, underscore)")
+  File "G:\Meu Drive\Information technology - IT\Linguagem de Programação\SQL\Project_DBT\venv-dbt\Lib\site-packages\click\termui.py", line 262, in prompt
+    value = prompt_func(prompt)
+  File "G:\Meu Drive\Information technology - IT\Linguagem de Programação\SQL\Project_DBT\venv-dbt\Lib\site-packages\click\termui.py", line 245, in prompt_func
+    raise Abort() from None
+click.exceptions.Abort
+
+[0m00:17:27.025381 [debug] [MainThread]: Command `dbt init` failed at 00:17:27.025156 after 84.41 seconds
+[0m00:17:27.026272 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CD840B2060>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CD84100DD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CD841245A0>]}
+[0m00:17:27.027177 [debug] [MainThread]: Flushing usage events
+[0m00:15:31.174363 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019D292367B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019D2B6C7ED0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019D2B6C7B10>]}
+
+
+============================== 00:15:31.226335 | 5a6cc5f1-e114-4ba5-b8ea-5027f4d8afc5 ==============================
+[0m00:15:31.226335 [info ] [MainThread]: Running with dbt=1.12.5
+[0m00:15:31.227898 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'maximum_seed_size_mib': '1', 'target_path': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'False', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\rafae\\.dbt', 'use_colors': 'True', 'hints_enabled': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'invocation_command': 'dbt run', 'log_path': 'logs'}
+[0m00:15:31.229983 [error] [MainThread]: [[31mERROR[0m]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path G:\Meu Drive\Information technology - IT\Linguagem de Programação\SQL\Project_DBT\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m00:15:31.234843 [debug] [MainThread]: Command `dbt run` failed at 00:15:31.234617 after 0.32 seconds
+[0m00:15:31.235628 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019D2B6ED810>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019D2B738710>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019D2B6F9590>]}
+[0m00:15:31.236587 [debug] [MainThread]: Flushing usage events
+[0m00:16:12.549049 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m00:22:07.567226 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E682A327B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E684ECBED0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E684ECBB10>]}
+
+
+============================== 00:22:07.597395 | f41d5be4-291a-4af3-9ed1-8e83848084e5 ==============================
+[0m00:22:07.597395 [info ] [MainThread]: Running with dbt=1.12.5
+[0m00:22:07.599091 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'maximum_seed_size_mib': '1', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'version_check': 'True', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'False', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\rafae\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'use_colors': 'True', 'hints_enabled': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'invocation_command': 'dbt run', 'log_path': 'logs'}
+[0m00:22:07.600589 [error] [MainThread]: [[31mERROR[0m]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path G:\Meu Drive\Information technology - IT\Linguagem de Programação\SQL\Project_DBT\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m00:22:07.603749 [debug] [MainThread]: Command `dbt run` failed at 00:22:07.603635 after 0.20 seconds
+[0m00:22:07.604348 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E684EED810>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E684F34710>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E684EF9590>]}
+[0m00:22:07.604916 [debug] [MainThread]: Flushing usage events
+[0m00:22:46.189845 [debug] [MainThread]: An error was encountered while trying to flush usage events
