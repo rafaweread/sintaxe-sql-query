@@ -6,7 +6,12 @@ SELECT
     i.id_Produto,
     i.quantidade,
     i.preco_unitario,
-    i.desconto
+    i.desconto,
+    --Valor Bruto do Item
+    (i.quantidade * i.preco_unitario) AS Valor_bruto,
+
+    -- Valor líquido do item 
+    (i.quantidade * i.preco_unitario) - desconto AS valor_liquido
 
 FROM
     {{ref('stg_pedidos')}} p
