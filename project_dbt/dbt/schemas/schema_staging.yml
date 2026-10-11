@@ -1,0 +1,132 @@
+version: 2
+
+models:
+
+  # ==========================================
+  # STAGING - CLIENTES
+  # ==========================================
+  - name: stg_clientes
+    description: "Modelo de staging responsável pela limpeza e padronização dos dados de clientes"
+
+    columns:
+      - name: id_cliente
+        description: "Identificador do cliente"
+        tests:
+          - not_null
+          - unique
+
+      - name: nome_completo
+        description: "Nome completo do cliente com espaços removidos"
+
+      - name: email
+        description: "Email do cliente padronizado em letras minúsculas; valores vazios são convertidos para nulo"
+
+      - name: data_cadastro
+        description: "Data de cadastro do cliente convertida para o tipo date"
+
+      - name: cidade
+        description: "Cidade do cliente com espaços removidos"
+
+      - name: estado
+        description: "Estado do cliente padronizado em letras maiúsculas"
+
+      - name: fl_email_nulo
+        description: "Flag que indica se o email estava nulo ou vazio na origem"
+
+
+  # ==========================================
+  # STAGING - PRODUTOS
+  # ==========================================
+  - name: stg_produtos
+    description: "Modelo de staging responsável pela limpeza e padronização dos dados de produtos"
+
+    columns:
+      - name: id_produto
+        description: "Identificador do produto"
+        tests:
+          - not_null
+          - unique
+
+      - name: nome_produto
+        description: "Nome do produto com espaços removidos"
+
+      - name: preco
+        description: "Preço do produto convertido para valor numérico"
+
+      - name: fl_preco_nulo
+        description: "Flag que indica se o preço estava nulo ou vazio na origem"
+
+      - name: categoria
+        description: "Categoria do produto padronizada em letras minúsculas"
+
+      - name: ativo
+        description: "Indica se o produto está ativo, convertido para valor booleano"
+
+
+  # ==========================================
+  # STAGING - PEDIDOS
+  # ==========================================
+  - name: stg_pedidos
+    description: "Modelo de staging responsável pela limpeza e padronização dos dados de pedidos"
+
+    columns:
+      - name: id_pedido
+        description: "Identificador do pedido"
+        tests:
+          - not_null
+
+      - name: id_cliente
+        description: "Identificador do cliente associado ao pedido"
+        tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_clientes')
+                field: id_cliente
+
+      - name: data_pedido
+        description: "Data do pedido convertida para o tipo date a partir de diferentes formatos de origem"
+
+      - name: status
+        description: "Status do pedido padronizado em letras minúsculas e com valores equivalentes normalizados"
+
+      - name: forma_pagamento
+        description: "Forma de pagamento padronizada em letras minúsculas; valores nulos ou vazios são convertidos para undefined"
+
+
+  # ==========================================
+  # STAGING - ITENS DE PEDIDO
+  # ==========================================
+  - name: stg_itens_pedido
+    description: "Modelo de staging responsável pela limpeza e padronização dos itens de pedido"
+
+    columns:
+      - name: id_item_pedido
+        description: "Identificador do item de pedido"
+        tests:
+          - not_null
+
+      - name: id_pedido
+        description: "Identificador do pedido associado ao item"
+        tests:
+          - not_null
+
+      - name: id_produto
+        description: "Identificador do produto associado ao item"
+        tests:
+          - not_null
+
+      - name: quantidade
+        description: "Quantidade de produtos no item do pedido"
+
+      - name: preco_unitario
+        description: "Preço unitário convertido para valor numérico"
+
+      - name: desconto
+        description: "Valor do desconto convertido para numérico; valores nulos são tratados como zero"
+
+      - name: fl_quantidade_invalida
+        description: "Flag que indica se a quantidade estava nula, igual a zero ou negativa"
+
+      - name: fl_preco_unitario_nulo
+        description: "Flag que indica se o preço unitário estava nulo ou vazio na origem"

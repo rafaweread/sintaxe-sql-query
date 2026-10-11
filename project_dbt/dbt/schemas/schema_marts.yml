@@ -1,0 +1,160 @@
+version: 2
+
+models:
+
+# ======================================
+# FACT - PEDIDOS
+# =======================================
+
+  - name: fct_pedidos
+    description: "Tabela de fato com informações consolidadas de pedidos, contendo métricas agregadas por pedido."
+    
+    columns:
+      - name: id_pedido
+        description: "Identificador do pedido."
+        tests:
+          - not_null
+          - unique
+          
+      - name: id_cliente
+        description: "Identificador do cliente associado ao pedido."
+        tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_clientes')
+                field: id_cliente
+                
+      - name: data_pedido
+        description: "Data em que o pedido foi realizado."
+        
+      - name: status
+        description: "Status pedido"
+        tests:
+          - accepted_values:
+              arguments:
+                values: ['undefined','refunded','paid','shipped','completed','processing','canceled']
+                
+      - name: valor_bruto_total
+        description: "Valor total bruto do pedido antes dos descontos."
+        
+      - name: valor_liquido_total
+        description: "Valor total lóquido do pedido após os descontos."
+
+# ==========================================
+# FACT - ITENS DE PEDIDOS
+# ==========================================
+
+  - name: fct_pedidos_itens
+    description: "Tabela fato no nível de item de pedido, contendo granularidade por produto"
+
+    columns:
+      - name: id_pedido
+        description: "Identificador do pedido"
+        tests:
+          - not_null
+
+      - name: id_produto
+        description: "Identificador do produto"
+        tests:
+          - not_null
+          - relationships:
+              arguments:
+                 to: ref('dim_produtos')
+                 field: id_produto
+
+      - name: id_cliente
+        description: "Identificador do cliente"
+        tests:
+          - relationships:
+              arguments:
+                 to: ref('dim_clientes')
+                 field: id_cliente
+
+      - name: data_pedido
+        description: "Data do pedido"
+
+      - name: quantidade
+        description: "Quantidade de itens vendidos"
+
+      - name: preco_unitario
+        description: "Preço unitário do produto"
+
+      - name: desconto
+        description: "Valor de desconto aplicado"
+
+      - name: valor_bruto
+        description: "Valor bruto do item (quantidade x preço)"
+
+      - name: valor_liquido
+        description: "Valor líquido do item após desconto"
+
+# ==========================================
+# DIMENSION - CLIENTES
+# ==========================================
+
+  - name: dim_clientes
+    description: "Dimensão contendo informações descritivas dos clientes"
+
+    columns:
+      - name: id_cliente
+        description: "Identificador único do cliente"
+        tests:
+          - not_null
+          - unique
+
+      - name: nome_completo
+        description: "Nome completo do cliente"
+
+      - name: email
+        description: "Endereço de email do cliente"
+
+      - name: cidade
+        description: "Cidade do cliente"
+
+      - name: estado
+        description: "Estado do cliente"
+
+
+# ==========================================
+# DIMENSION - PRODUTOS
+# ==========================================
+
+  - name: dim_produtos
+    description: "Dimensão contendo informações dos produtos"
+
+    columns:
+      - name: id_produto
+        description: "Identificador único do produto"
+        tests:
+          - not_null
+          - unique
+
+      - name: nome_produto
+        description: "Nome do produto"
+
+      - name: categoria
+        description: "Categoria do produto"
+
+      - name: preco
+        description: "Preço padrão do produto"
+
+      - name: ativo
+        description: "Indica se o produto está ativo"
+
+# ==========================================
+# DIMENSION - STATUS
+# ==========================================
+
+  - name: dim_status
+    description: "Dimensão de status de pedidos, originada a partir de seed"
+
+    columns:
+      - name: status
+        description: "Código do status do pedido"
+        tests:
+          - not_null
+          - unique
+
+      - name: descricao
+        description: "Descrição do status"

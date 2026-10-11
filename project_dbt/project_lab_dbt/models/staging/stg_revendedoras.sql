@@ -3,4 +3,4 @@ select
 from
 	superplano s
 where
-	s."Papel" = 'Bronze'
+	s.Papel = 'Bronze'

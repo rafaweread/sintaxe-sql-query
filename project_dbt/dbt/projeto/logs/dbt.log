@@ -1,0 +1,29 @@
+[0m00:45:37.094566 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FEB98B80D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FEB98EFF90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FEB98EE3D0>]}
+
+
+============================== 00:45:37.099567 | b02392d3-60c0-4734-b620-18a75ebaa555 ==============================
+[0m00:45:37.099567 [info ] [MainThread]: Running with dbt=1.11.8
+[0m00:45:37.100567 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\victo\\.dbt', 'indirect_selection': 'eager', 'invocation_command': 'dbt init dbt_curso', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m00:45:37.135879 [debug] [MainThread]: Starter project path: C:\Users\victo\AppData\Local\Programs\Python\Python311\Lib\site-packages\dbt\include\starter_project
+[0m00:45:37.150862 [info ] [MainThread]: 
+Your new dbt project "dbt_curso" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m00:45:37.151863 [info ] [MainThread]: Setting up your profile.
+[0m00:48:57.948229 [info ] [MainThread]: Profile dbt_curso written to C:\Users\victo\.dbt\profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m00:48:57.950243 [debug] [MainThread]: Command `dbt init` succeeded at 00:48:57.950243 after 200.94 seconds
+[0m00:48:57.951227 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FEB88C27D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FEB1DD5690>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FEB990BA10>]}
+[0m00:48:57.951227 [debug] [MainThread]: Flushing usage events
+[0m00:48:58.616466 [debug] [MainThread]: An error was encountered while trying to flush usage events

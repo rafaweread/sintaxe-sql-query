@@ -1,0 +1,34 @@
+version: 2
+
+snapshots:
+
+  - name: snap_clientes
+    description: "Snapshot que mantém o histórico de alterações dos dados de clientes ao longo do tempo"
+
+    columns:
+      - name: id_cliente
+        description: "Identificador único do cliente"
+        tests:
+          - not_null
+
+      - name: nome_completo
+        description: "Nome completo do cliente"
+
+      - name: cidade
+        description: "Cidade do cliente"
+
+      - name: estado
+        description: "Estado do cliente"
+
+      # Campos automáticos do dbt
+      - name: dbt_valid_from
+        description: "Data de início da validade do registro"
+
+      - name: dbt_valid_to
+        description: "Data de fim da validade do registro (nulo para versão atual)"
+
+      - name: dbt_scd_id
+        description: "Identificador único da versão do registro"
+
+      - name: dbt_updated_at
+        description: "Timestamp da última atualização detectada pelo snapshot"
